@@ -1,59 +1,11 @@
-# YATAS - Yet Another Tailwind Apline Starter
+# Línea de la vivienda (lineadelavivienda.com)
 
-<a href="https://yatas.netlify.app/" target="_blank">
-  <img alt="YATAS Logo" width="350" src="./src/img/logo.svg">
-</a>
+Este repositorio contiene la página de internet (static site) de 11ty [lineadelavivienda.com](https://lineadelavivienda.com).
 
-Minimal 11ty starter project that build css with the new [tailwindcss cli](https://github.com/tailwindlabs/tailwindcss/releases#all-new-improved-tailwind-cli) (tailwind 2.2) and [esbuild](https://esbuild.github.io/) for javascript.
+## Todos los repositorios:
 
-## [Demo](https://yatas.netlify.app/)
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/needbrainz/yatas)
-
-## Stack
-
-* TailwindCSS v2
-* Apline.js v3
-
-## Install
-
-```
-npm install
-```
-
-## Local dev
-
-```
-npm run start
-```
-
-## Build
-
-Minified production build
-
-```
-npm run build 
-```
-
-## Assets versioning
-
-This starter includes a small js script to which can add a hash to your assets when building for production builds.
-The script will look for files to include a hash (based on the md5 of the built file content) eg: ```styles.734a7607648afdb.css``` instead of ```styles.css```.
-
-The entry point for matching regular file path to versionned path is generated as an 11ty global data object in ```_data/hash.json``` with the simple structure 
-```js
-{
-  'path/to/resource.css': 'path/to/resource.hash.css'
-}
-```
-
-In your 11ty template, you can then simply retrieve the versioned path from the array ```{{ hash['path/to/resource.css'] }}``` 
-
-If you want to add other assets to this generated data array, simply include the path in the ```assets``` const in the ```hash.js``` file in the root directory (files listed below are already included).
-
-```js
-const assets = [
-  'css/styles.css',
-  'js/scripts.js'
-];
-```
+- [rodrigoescandon/ldlv-11ty-kiosk](https://github.com/rodrigoescandon/ldlv-11ty-kiosk)
+- [rodrigoescandon/ldlv-dialogflow-proxy-chatbot](https://github.com/rodrigoescandon/ldlv-dialogflow-proxy-chatbot)
+- [rodrigoescandon/ldlv-sanity-db](https://github.com/rodrigoescandon/ldlv-sanity-db)
+- [rodrigoescandon/ldlv-whatsapp-server](https://github.com/rodrigoescandon/ldlv-whatsapp-server)
+- [rodrigoescandon/ldlv-lineadelavivienda.com](https://github.com/rodrigoescandon/ldlv-lineadelavivienda.com)

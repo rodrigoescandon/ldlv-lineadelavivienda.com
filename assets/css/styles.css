@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --gradient-1: #e2d300;
+  --gradient-2: #46df5a;
+  --gradient-3: #1c7eff;
+}
+
+body {
+  color: var(--gradient-3);
+}
+
+/* fallback for IE */
+.gradient-text-border {
+  color: #46df5a;
+  border-color: #46df5a;
+}
+/* gradient text for modern browsers */
+@supports (background-clip: text) {
+  .gradient-text-border {
+    background-image: linear-gradient(
+      180deg,
+      var(--gradient-1),
+      var(--gradient-2),
+      var(--gradient-3)
+    );
+    background-clip: text;
+    color: transparent;
+    border-image: linear-gradient(
+        180deg,
+        var(--gradient-1),
+        var(--gradient-2),
+        var(--gradient-3)
+      )
+      1;
+  }
+}
+
+h2 {
+  @apply font-bold;
+  @apply mt-8;
+}
+
+p {
+  @apply mt-4;
+}
